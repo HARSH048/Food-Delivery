@@ -1,0 +1,16 @@
+/* ExploreMenu.css */
+
+.explore-menu {
+    text-align: center;
+  }
+  
+.explore-menu-list {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    overflow-x: scroll;
+    gap: 70px; 
+    justify-content: center;
+}
+ 
+  

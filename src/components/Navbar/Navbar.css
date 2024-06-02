@@ -1,0 +1,72 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    width: 100px; /* Adjust size as needed */
+  }
+  
+  .navbar-menu {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .navbar-menu li {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right img {
+    cursor: pointer;
+  }
+  
+  .navbar-search-icon {
+    position: relative;
+    margin-right: 20px;
+  }
+
+  .navbar-basket-icon {
+    position: relative;
+    margin-right: 20px;
+  }
+  
+  .dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: red; /* Change color as needed */
+    border-radius: 50%;
+  }
+  
+  button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3;
+  }
+
+  .navbar-menu li.active {
+    color: rgb(115, 137, 247); /* Change to desired active color */
+    font-weight: bold; /* Add any other styles for the active item */
+  }
+
+  button:hover{
+    background-color: green;
+  }
+
+  

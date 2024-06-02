@@ -1,0 +1,23 @@
+/* ExploreMenu.css */
+.menu-list {
+    overflow-x: scroll;
+    gap: 1px;
+    cursor: pointer;
+}
+
+.menu-list img {
+    /* Styles for the menu item image */
+    width: 100px; /* Set image width */
+    height: 100px; /* Set image height */
+    gap: 2px;
+}
+
+.menu-list p {
+    margin: 2px 0; /* Add margin around the text */
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-list.active {
+    color: rgb(159, 34, 34); /* Text color for active item */
+}
