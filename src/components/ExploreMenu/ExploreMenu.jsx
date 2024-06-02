@@ -6,6 +6,7 @@ import Menu from './Menu';
 function ExploreMenu() {
     const [activeItem,setActiveItem]=useState(null);
     const handleItemClick = (index) => {
+        console.log(activeItem);
         setActiveItem(index === activeItem ? null : index);// Update activeItem directly within the function
       };
   return (
