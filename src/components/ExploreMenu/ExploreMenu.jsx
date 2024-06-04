@@ -12,7 +12,7 @@ function ExploreMenu() {
     setActiveItem(index === activeItem ? null : index); // Update activeItem directly within the function
   };
   return (
-    <div className="explore-menu">
+    <div className="explore-menu" id = 'explore-menu'>
       <div className="explore-menu-list">
         {menu_list &&
           menu_list.map((ele, index) => (

@@ -5,11 +5,12 @@ import Footer from './components/Footer/Footer'
 
 function App() {
   return (
-    <div className='app'>
+    <div className="app">
       <Navbar />
-      < Outlet />
+      <Outlet />
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default App

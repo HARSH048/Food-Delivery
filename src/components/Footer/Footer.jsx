@@ -1,37 +1,46 @@
-import React from 'react';
+import React from "react";
+import { assets } from "../../assets/assets";
 import './Footer.css'
 
 function Footer() {
-    const socialLinks = [
-        { name: 'Facebook', url: 'https://facebook.com' },
-        { name: 'Twitter', url: 'https://twitter.com' },
-        { name: 'Instagram', url: 'https://instagram.com' },
-    ];
-
-    return (
-        <footer className="footer">
-            <div className="footer-content">
-                <div className="footer-links">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        {socialLinks.map((link, index) => (
-                            <li key={index}>
-                                <a href={link.url} target="_blank" rel="noopener noreferrer">{link.name}</a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div className="footer-info">
-                    <h3>Contact Info</h3>
-                    <p>Email: contact@example.com</p>
-                    <p>Phone: 123-456-7890</p>
-                </div>
-            </div>
-            <div className="footer-bottom">
-                <p>&copy; 2024 Your Company. All rights reserved.</p>
-            </div>
-        </footer>
-    );
+  return (
+    <div className="footer" id="footer">
+      <div className="footer-content">
+        <div className="footer-content-left">
+          <img src={assets.logo} />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit ratione ea quod reiciendis fugiat ad aliquam
+            accusantium molestias doloribus quasi animi nulla amet placeat ipsa
+            eum ut, dolorum exercitationem quaerat!
+          </p>
+          <div className="footer-social-icon">
+            <img src={assets.facebook_icon}></img>
+            <img src={assets.twitter_icon}></img>
+            <img src={assets.linkedin_icon}></img>
+          </div>
+        </div>
+        <div className="footer-content-center">
+            <h2>COMPANY</h2>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Delivery</li>
+                <li>Privacy Policy</li>
+            </ul>
+        </div>
+        <div className="footer-content-right">
+            <h2>GET IN TOUCH</h2>
+            <ul>
+                <li>+1-212-456-7890</li>
+                <li>conatct@tomato.com</li>
+            </ul>
+        </div>
+      </div>
+      <hr />
+      <p className="footer-copyright">Copyright 2024 Tomato.com- All Right Reserved</p>
+    </div>
+  );
 }
 
 export default Footer;
