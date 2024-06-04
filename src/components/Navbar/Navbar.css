@@ -2,8 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
+    color: black;
     padding: 10px 20px;
   }
   
@@ -52,8 +51,8 @@
   
   button {
     background-color: transparent;
-    color: white;
-    border: 1px solid #fff;
+    color: black;
+    border: 1px solid black;
     padding: 8px 20px;
     border-radius: 20px;
     cursor: pointer;

@@ -3,13 +3,14 @@ import {assets} from '../../assets/assets'
 import './Navbar.css'
 import { Link } from "react-router-dom";
 
-function Navbar() {
-    const [activeItem,setActive] = useState('Home')
+function Navbar({ setLogin }) {
+  const [activeItem, setActive] = useState("Home");
   return (
     <div className="navbar">
       <img src={assets.logo} alt="" className="logo" />
       <ul className="navbar-menu">
-        <Link to='/'
+        <Link
+          to="/"
           className={activeItem === "Home" ? "active" : ""}
           onClick={() => setActive("Home")}
         >
@@ -45,7 +46,7 @@ function Navbar() {
           <img src={assets.basket_icon} alt="" />
           <div className="dot"></div>
         </div>
-        <button>Sign In</button>
+        <button onClick={() => setLogin(true)}>Sign In</button>
       </div>
     </div>
   );
