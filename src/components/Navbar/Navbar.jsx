@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {assets} from '../../assets/assets'
 import './Navbar.css'
 import { Link } from "react-router-dom";
+import { StoreContext } from '../../context/StoreContext';
 
 function Navbar({ setLogin }) {
   const [activeItem, setActive] = useState("Home");
+  const {totalAmount} = useContext(StoreContext)
   return (
     <div className="navbar">
+      <Link to='/'>
       <img src={assets.logo} alt="" className="logo" />
+      </Link>
       <ul className="navbar-menu">
         <Link
           to="/"
@@ -43,8 +47,10 @@ function Navbar({ setLogin }) {
           <img src={assets.search_icon} alt="" />
         </div>
         <div className="navbar-basket-icon">
+          <Link to='/cart'>
           <img src={assets.basket_icon} alt="" />
-          <div className="dot"></div>
+          {totalAmount > 0  && <div className="dot"></div>}
+          </Link>
         </div>
         <button onClick={() => setLogin(true)}>Sign In</button>
       </div>
