@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../context/StoreContext";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const { cartItem, food_list, setCartItem, totalAmount } = useContext(StoreContext);
   const [fixedAmount,setFixedAmount] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(()=>{
     setFixedAmount(totalAmount+2);
@@ -85,7 +88,7 @@ function Cart() {
                   <p>{fixedAmount}</p>
                 </div>
               </div>
-              <button>PROCEED TO CHECKOUT</button>
+              <button onClick={()=>navigate('/place-order')}>PROCEED TO CHECKOUT</button>
             </div>
            <div className="cart-promocode">
             <div>
