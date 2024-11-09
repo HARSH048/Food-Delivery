@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: food-delivery
+spec:
+  selector:
+    app: food-delivery   # The label that matches the pods (ensure this label is correct on the pods)
+  ports:
+    - protocol: TCP
+      port: 80        # The port the service exposes inside the cluster
+      targetPort: 80  # The port on the container (Nginx) to forward traffic to
+      nodePort: 30007 # The port on the node (Minikube VM) that maps to the service
+      name: http
+  type: NodePort     # Exposes the service externally

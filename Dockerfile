@@ -1,5 +1,5 @@
 # Stage 1: Build React app
-FROM node:14-alpine as build
+FROM node:14-alpine AS build
 
 # Set working directory
 WORKDIR /app
@@ -8,11 +8,11 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
+# Build the React app
+#RUN npm run build
+
 # Copy the rest of the application code
 COPY . .
-
-# Build the React app
-# RUN npm run build
 
 # Stage 2: Serve React app using Nginx
 FROM nginx:alpine
